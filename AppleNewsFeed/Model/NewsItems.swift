@@ -19,7 +19,6 @@ struct NewsItems: Codable {
 struct Article: Codable {
     let source: Source?
     
-    #warning("add to core data")
     let author: String?
     let title, description: String?
     let url: String?
