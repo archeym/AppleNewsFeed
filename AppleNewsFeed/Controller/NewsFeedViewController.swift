@@ -23,7 +23,8 @@ class NewsFeedViewController: UIViewController {
 
     
     @IBAction func infoBarItemTapped(_ sender: Any) {
-        #warning("alert")
+        //#warning("alert")
+        basicAlert(title: "News Feed Info!", message: "Apple News Feed articles.")
     }
     
     @IBAction func extraButtonTapped(_ sender: Any) {
@@ -71,7 +72,7 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource {
         cell.newsTitleLabel.text = item.title ?? ""
         cell.newsTitleLabel.numberOfLines = 0
         cell.newsImageView.sd_setImage(with: URL(string: item.urlToImage ?? ""))
-        
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -85,10 +86,14 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
         guard let vc = storyboard.instantiateViewController(withIdentifier: "DeatilViewController") as? DeatilViewController else { return }
+       
         let item = newsItems[indexPath.row]
-        vc.titleString = item.title ?? ""
+        vc.titleString = item.title ?? "Title"
         vc.webString = item.url ?? ""
-#warning("rets item passed")
+        vc.authorString = item.author ?? "Apple"
+        vc.descString = item.description ?? "Desc"
+        vc.imageString = item.urlToImage ?? ""
+//#warning("item passed")
         
 //        present(vc, animated: true)
         navigationController?.pushViewController(vc, animated: true)

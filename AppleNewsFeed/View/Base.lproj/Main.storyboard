@@ -106,12 +106,12 @@
         <!--Deatil View Controller-->
         <scene sceneID="v4H-kK-gVM">
             <objects>
-                <viewController storyboardIdentifier="DeatilViewController" id="gWe-6D-2lV" customClass="DeatilViewController" customModule="AppleNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DeatilViewController" hidesBottomBarWhenPushed="YES" id="gWe-6D-2lV" customClass="DeatilViewController" customModule="AppleNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GJD-fj-9ze">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0mc-Oa-RVs">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="0mc-Oa-RVs">
                                 <rect key="frame" x="27" y="36" width="266" height="506"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yX0-Sn-Sjw">
@@ -127,12 +127,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rdW-T3-Ujs">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rdW-T3-Ujs">
                                                 <rect key="frame" x="0.0" y="62" width="266" height="160"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="MlP-Po-mut"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="266" id="cWW-0d-um0"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MoP-CM-zpm">
                                                 <rect key="frame" x="0.0" y="238" width="266" height="205"/>
@@ -143,40 +149,50 @@
                                                 </constraints>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="TWl-w3-Bzf">
-                                        <rect key="frame" x="0.0" y="471" width="266" height="35"/>
+                                        <rect key="frame" x="0.0" y="461" width="266" height="45"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ea-NW-Pr1">
-                                                <rect key="frame" x="0.0" y="0.0" width="112" height="35"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ea-NW-Pr1">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="45"/>
                                                 <color key="backgroundColor" red="0.43258678909999998" green="0.4112017751" blue="0.91079956289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="Lpr-yt-PCb"/>
+                                                    <constraint firstAttribute="height" constant="45" id="Lpr-yt-PCb"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="Qj8-NW-MtP"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Read Full Article">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <segue destination="Qgv-Te-g8q" kind="show" id="9oc-P0-eO7"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVK-PW-haq" userLabel="Hello">
-                                                <rect key="frame" x="154" y="0.0" width="112" height="35"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVK-PW-haq" userLabel="Hello">
+                                                <rect key="frame" x="154" y="0.0" width="112" height="45"/>
                                                 <color key="backgroundColor" red="0.43258678909999998" green="0.4112017751" blue="0.91079956289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="Uaa-QE-1Dt"/>
-                                                    <constraint firstAttribute="height" constant="35" id="iNT-Nn-pqy"/>
+                                                    <constraint firstAttribute="height" constant="45" id="iNT-Nn-pqy"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Save">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="savedButtonTapped:" destination="gWe-6D-2lV" eventType="touchUpInside" id="GgA-CU-gF7"/>
                                                 </connections>
@@ -196,6 +212,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descTextView" destination="MoP-CM-zpm" id="aGi-sY-7Nz"/>
+                        <outlet property="newsImageView" destination="rdW-T3-Ujs" id="Eur-4Y-cF9"/>
                         <outlet property="titleLabel" destination="tqn-kO-mXp" id="mmS-Mf-Kgv"/>
                     </connections>
                 </viewController>
@@ -238,16 +256,16 @@
             </objects>
             <point key="canvasLocation" x="3642" y="456"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Saved Table View Controller-->
         <scene sceneID="zlG-rj-CnW">
             <objects>
-                <tableViewController id="d09-hQ-t09" sceneMemberID="viewController">
+                <tableViewController id="d09-hQ-t09" customClass="SavedTableViewController" customModule="AppleNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="275-uc-F1n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="saveCell" rowHeight="200" id="MMo-cu-2UT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="saveCell" rowHeight="200" id="MMo-cu-2UT" customClass="NewsTableViewCell" customModule="AppleNewsFeed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MMo-cu-2UT" id="OdH-3n-T88">
@@ -283,6 +301,10 @@
                                         <constraint firstItem="nky-gK-Cc1" firstAttribute="centerX" secondItem="OdH-3n-T88" secondAttribute="centerX" id="qPf-DR-saA"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="newsImageView" destination="frH-zy-dmL" id="9D6-wd-uug"/>
+                                    <outlet property="newsTitleLabel" destination="86x-b8-2aM" id="vQ2-3r-hLq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -306,7 +328,7 @@
                     <tabBarItem key="tabBarItem" title="News Feed" image="newspaper.circle" catalog="system" id="66H-iM-esQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aak-gH-39j">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -324,6 +346,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vOp-2P-lIh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sai-e8-E72">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
